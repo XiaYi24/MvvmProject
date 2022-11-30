@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#FF34373B">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="设备初始化设置"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="当前环境："
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/dialog_back_bl">
+
+                <com.etc.view.spinner.NiceSpinner
+                    android:id="@+id/environment_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:text="生产环境"
+                    android:textSize="14sp"
+                    app:popupTextAlignment="start" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/dp_6">
+
+            <TextView
+                android:id="@+id/tv_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:text="@string/deviceActivation"
+                android:textSize="@dimen/dp_15" />
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_toRightOf="@+id/tv_a"
+                android:text=" "
+                android:textSize="@dimen/dp_15" />
+
+            <ImageView
+                android:id="@+id/iv_state"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/loading_dialog_anim" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_6">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="@string/agent"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/dialog_back_bl">
+
+                    <com.etc.view.spinner.NiceSpinner
+                        android:id="@+id/agent_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:text="请选择"
+                        android:textSize="14sp"
+                        app:popupTextAlignment="start" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_6">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/operators"
+                    android:textSize="@dimen/dp_15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/dialog_back_bl">
+
+                    <com.etc.view.spinner.NiceSpinner
+                        android:id="@+id/operators_spinner"
+                        style="@style/schoolTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:text="请选择"
+                        android:textSize="14sp"
+                        app:popupTextAlignment="start" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_4"
+                android:padding="@dimen/dp_6">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="@string/school"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/dialog_back_bl">
+
+                    <com.etc.view.spinner.NiceSpinner
+                        android:id="@+id/schools_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:text="请选择"
+                        android:textSize="@dimen/sp_14"
+                        app:popupTextAlignment="start" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_sure_k"
+                android:layout_width="98dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="92dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/dialog_btn_bl"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/content_text_b"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end"
+        android:paddingLeft="8dp"
+        android:text="版本号："
+        android:textSize="9sp" />
+
+    <TextView
+        android:id="@+id/act_school_device_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/dp_6"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
+

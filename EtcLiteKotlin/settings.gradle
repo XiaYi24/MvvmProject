@@ -1,0 +1,41 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+    }
+
+    plugins {
+        id 'com.android.application' version '7.2.1'
+        id 'com.android.library' version '7.2.1'
+        id 'org.jetbrains.kotlin.android' version '1.6.10'
+        id 'org.jetbrains.kotlin.kapt' version '1.6.10'
+        id "org.jetbrains.kotlin.plugin.parcelize" version "1.6.10"
+    }
+    resolutionStrategy {
+        eachPlugin {
+            // Use `resolutionStrategy` to define the Hilt plugin and its coordinate
+            if (requested.id.id == 'dagger.hilt.android.plugin') {
+                useModule("com.google.dagger:hilt-android-gradle-plugin:2.40.5")
+            }
+        }
+    }
+
+
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+    }
+}
+rootProject.name = "EtcLiteKotlin"
+include ':app'

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EtcLiteKotlin</string>
+
+    <string name="deviceActivation">设备激活：</string>
+    <string name="select">选择</string>
+    <string name="operators">运营商：</string>
+    <string name="agent">代理商：</string>
+    <string name="school">学　校：</string>
+</resources>

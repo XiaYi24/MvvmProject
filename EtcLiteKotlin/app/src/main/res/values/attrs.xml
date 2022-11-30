@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="popupTextAlignment" format="enum">
+        <enum name="start" value="0" />
+        <enum name="end" value="1" />
+        <enum name="center" value="2" />
+    </attr>
+
+    <declare-styleable name="NiceSpinner">
+        <attr name="arrowTint" format="color" />
+        <attr name="hideArrow" format="boolean" />
+        <attr name="arrowDrawable" format="reference|color" />
+        <attr name="dropDownListPaddingBottom" format="dimension" />
+        <attr name="backgroundSelector" format="integer" />
+        <attr name="textTint" format="color" />
+        <attr name="popupTextAlignment" />
+        <attr name="entries" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="FrameLayoutWithHole">
+        <attr name="hole_radius" format="integer"/>
+        <attr name="background_color" format="color"/>
+        <attr name="radius_x" format="integer"/>
+        <attr name="radius_y" format="integer"/>
+    </declare-styleable>
+
+ <!-- 自定义颜色-->
+
+    <declare-styleable name="WarningView">
+        <attr name="warningColor" format="color" />
+        <attr name="borderWidth" format="dimension" />
+    </declare-styleable>
+</resources>
